@@ -5,10 +5,41 @@
  * See COPYING.txt for license details.
  */
 -->
-<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-   <body>
-       <referenceContainer name="header.panel">
-
-       </referenceContainer>
-   </body>
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <move element="header-wrapper" destination="header.panel.wrapper"/>
+        <referenceBlock name="top.links">
+            <referenceBlock name="authorization-link" remove="true"/>
+            <referenceBlock name="header" remove="true"/>
+            <referenceBlock name="register-link" remove="true"/>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" ifconfig="contact/contact/enabled" name="contact-us-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Contact Us</argument>
+                    <argument name="path" xsi:type="string">contact</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Template" name="call.us" after="-" template="Magento_Theme::call_us.phtml"/>
+        </referenceBlock>
+        <referenceContainer name="page.wrapper">
+            <container name="home.page.promotion.header" htmlTag="div" htmlClass="home-page-main-promotion-section" before="main.content">
+                <block class="Magento\Framework\View\Element\Template" name="promotion.header" template="Magento_Theme::promotion_header.phtml"/>
+            </container>
+        </referenceContainer>
+        <move element="breadcrumbs" destination="content" before="-"/>
+        <referenceContainer name="footer-container">
+            <referenceContainer name="footer">
+                <container name="footer-up" htmlClass="footer-up" htmlTag="div" before="copyright">
+                    <block class="Magento\Framework\View\Element\Template" name="browse.basecamp" template="Magento_Theme::browse_basecamp.phtml"/>
+                    <block class="Magento\Framework\View\Element\Template" name="footer.manager.account" template="Magento_Theme::footer_account_manager.phtml"/>
+                    <block class="Magento\Framework\View\Element\Template" name="term.and.condition" template="Magento_Theme::terms_and_condition.phtml"/>
+                    <block class="Magento\Framework\View\Element\Template" name="footer.location" template="Magento_Theme::footer_location.phtml"/>
+                    <referenceBlock name="store_switcher" remove="true"/>
+                    <referenceBlock name="footer_links" remove="true"/>
+                    <referenceBlock name="report.bugs" remove="true"/>
+                    <referenceBlock name="form.subscribe" remove="true"/>
+                </container>
+            </referenceContainer>
+        </referenceContainer>
+    </body>
 </page>

@@ -1,0 +1,382 @@
+@import "slick.less";
+@import "slick-theme.less";
+
+& when (@media-common = true) {
+    .slick-track {
+        display: flex;
+        align-items: center;
+    }
+
+    .page-main {
+        max-width: 100%;
+    }
+
+    ul {
+        padding-left: 0;
+    }
+
+    .my-list-item {
+        position: relative;
+    }
+
+    .brand-collapse {
+        width: 80%;
+        margin: auto;
+    }
+
+    .brand-image {
+        filter: grayscale(100%);
+    }
+
+    .brand-image:hover {
+        filter: grayscale(0%);
+    }
+
+    .main.category.banner {
+        margin-right: -7px;
+        margin-left: -7px;
+    }
+
+    .category-banner {
+        display: flex;
+        margin: auto;
+    }
+
+    .category-banner-image {
+        padding-left: 7px;
+        padding-right: 7px;
+        position: relative;
+    }
+
+    .promotion-banner-image {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .promotion-banner-image {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .promotion.row.banner.up {
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+
+    .promotion.row.banner.bottom {
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+
+    .promotion.banner.bottom {
+        display: flex;
+        margin: auto;
+    }
+
+    .promotion-banner-bottom-image {
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 5px;
+        padding-right: 5px;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    .best-seller-title {
+        & p:first-child {
+            font-family: @font-opensan-bold;
+            font-size: 24px;
+        }
+
+        & p {
+            text-align: center;
+            font-family: @font-opensand-regular;
+            font-size: 10px;
+        }
+    }
+
+    .best.seller {
+        .product-image-container {
+            border: solid 1px black;
+        }
+
+        .product-reviews-summary {
+            display: none;
+        }
+
+        .product-item-actions .actions-secondary {
+            display: none;
+        }
+    }
+
+    .swatch-attribute.size {
+        display: none;
+    }
+
+    .home.news {
+        background-color: #efefef;
+    }
+
+    .home-news-title {
+        text-align: center;
+        font-family: @font-opensan-bold;
+        font-size: 24px;
+        font-weight: 700;
+        color: black;
+    }
+
+    .category-banner-image {
+        box-sizing: border-box;
+    }
+
+    ul, ol {
+        margin-top: 0rem;
+        margin-bottom: 0px;
+    }
+
+    .slick-slide img {
+        display: inline-block !important;
+    }
+}
+
+//
+//  Mobile (styles-m.css)
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    .category-banner-text {
+        .mixin-banner-text(@font-size: 22pt)
+    }
+    .news-right-item-content {
+        & p:first-child {
+            font-family: @font-opensan-bold;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 24px;
+        }
+
+        & p {
+            font-family: @font-opensand-regular;
+            font-size: 1.2rem;
+            color: black;
+            font-weight: 400;
+            line-height: 19px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .slide-slogan {
+        font-family: @font-family-banner;
+        position: absolute;
+        z-index: 999;
+        top: 18%;
+        left: 16%;
+        font-size: 22px;
+        letter-spacing: 1px;
+        line-height: 14px;
+        color: #ffffff;
+        font-weight: 400;
+        text-align: center;
+        width: 10%;
+        transform: rotate(-10deg);
+    }
+    .slide-text {
+        .banner-text(@font-size: 20px, @top: 43%, @left: 13%)
+    }
+    .category-banner-text {
+        .mixin-banner-text(@font-size: 3.3rem)
+    }
+    .home-news-item {
+        display: block;
+    }
+    .news-left {
+        display: none;
+    }
+    .news-right {
+        display: flex;
+    }
+    .news-right-item:first-child {
+        padding-right: 20px;
+    }
+    .news-left {
+        padding: 0;
+    }
+    .news-right-item-content {
+        & p:first-child {
+            font-family: @font-opensan-bold;
+            font-size: 9pt;
+            font-weight: 700;
+            margin-bottom: 0px;
+            line-height: 16px;
+        }
+
+        & p {
+            font-family: @font-opensand-regular;
+            font-size: 8pt;
+            color: black;
+            font-weight: 400;
+            line-height: 19px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            overflow: hidden;
+        }
+    }
+    .promotion-banner {
+        display: block;
+        margin: auto;
+    }
+    .promotion.banner.bottom {
+        flex-wrap: wrap;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .category-banner-text {
+        .mixin-banner-text(@font-size: 20pt)
+    }
+    .home.news {
+        margin-top: -30px;
+    }
+    .news-right {
+        display: flex;
+    }
+    .news-right-item:first-child {
+        padding-right: 1rem;
+    }
+}
+
+//
+//  Desktop (style-l.css)
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .category-banner-text {
+        .mixin-banner-text(@font-size: 31pt)
+    }
+    .promotion.row.banner.up {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .promotion-banner-bottom-image {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .best-seller-title {
+        & p:first-child {
+            font-family: @font-opensan-bold;
+            font-size: 24px;
+        }
+
+        & p {
+            text-align: center;
+            font-family: @font-opensand-regular;
+            font-size: 20px;
+        }
+    }
+    .page-main {
+        max-width: 100%;
+    }
+    ul, ol {
+        margin-bottom: 0px;
+    }
+    .home.news {
+        margin-top: -6rem;
+    }
+    .home-news-item {
+        display: flex;
+    }
+    .news-right {
+        display: flex;
+        width: 50%;
+    }
+    .news-left {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .news-right-item:first-child {
+        padding-right: 35px;
+    }
+    .news-right-item-content {
+        & p:first-child {
+            font-family: @font-opensan-bold;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            line-height: 24px;
+        }
+
+        & p {
+            font-family: @font-opensand-regular;
+            font-size: 16px;
+            color: black;
+            font-weight: 400;
+            line-height: 19px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            overflow: hidden;
+        }
+    }
+    .promotion-banner {
+        display: flex;
+        margin: auto;
+    }
+    .promotion.banner.bottom {
+        flex-wrap: nowrap;
+        display: flex;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .news-left {
+        display: none;
+    }
+    .news-right {
+        width: 100%;
+    }
+    .news-right-item-content {
+        & p:first-child {
+            font-size: 12pt;
+            margin-bottom: 0px;
+            line-height: 21px;
+        }
+
+        & p {
+            font-size: 10pt;
+            font-weight: 400;
+            line-height: 19px;
+            -webkit-line-clamp: 3;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    .news-left {
+        display: block;
+    }
+    .news-right {
+        width: 50%;
+    }
+    .news-right-item-content {
+        & p:first-child {
+            font-size: 12pt;
+            margin-bottom: 40px;
+            line-height: 16px;
+        }
+
+        & p {
+            font-size: 10pt;
+            font-weight: 400;
+            line-height: 19px;
+            -webkit-line-clamp: 3;
+        }
+    }
+}
+
+

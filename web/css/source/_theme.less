@@ -1,0 +1,28 @@
+@font-opensand-regular : 'OpenSan regular';
+@font-family-banner : 'Caveat Brush regular';
+@font-opensan-bold: 'OpenSan bold';
+@font-opensan-extrabold: 'OpenSan extra-bold';
+@footer-title-color : #ff3e02;
+@footer-link-color: #f4f4f4;
+.mixin-flex(@justify-content: unset) {
+    display: flex;
+    justify-content: @justify-content;
+}
+.banner-text  (@font-size: 55px, @top: 62%, @left: 20%, @transform: rotate(-8deg)) {
+    position: absolute;
+    font-family: @font-family-banner;
+    font-size: @font-size;
+    color: #ec2f67;
+    top: @top;
+    left: @left;
+    transform: @transform;
+}
+.mixin-banner-text(@top: 39%, @font-size: 15pt) {
+    font-family: @font-opensan-extrabold;
+    font-size: @font-size;
+    position: absolute;
+    top: @top;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+}

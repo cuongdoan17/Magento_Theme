@@ -1,0 +1,75 @@
+<div class="promotion-header">
+    <?php
+        echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('header-title-1')->toHtml();
+    ?>
+</div>
+<script>
+    require([
+        'jquery',
+        'slick'
+    ], function ($) {
+        $(document).ready(function () {
+            $(".promotion-header").slick({
+                dots: false,
+                arrows: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplaySpeed: 3000,
+                responsive: [
+                    {
+                        breakpoint: 1440,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            dots: false,
+                            arrows: false,
+                            infinite: true
+                        }
+                    },
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            dots: false,
+                            arrows: false,
+                            infinite: true
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            dots: false,
+                            arrows: false,
+                            infinite: true
+                        }
+                    },
+                    {
+                        breakpoint: 640,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            dots: false,
+                            arrows: false,
+                            infinite: true
+                        }
+                    },
+                    {
+                        breakpoint: 320,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            dots: false,
+                            arrows: false,
+                            infinite: true
+                        }
+                    }
+                ]
+            });
+        });
+    });
+</script>

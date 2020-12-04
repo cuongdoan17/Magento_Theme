@@ -1,0 +1,191 @@
+& when (@media-common = true) {
+    button#product-addtocart-button {
+        background-color: #7ebf3a;
+        color: white;
+        width: 100%;
+    }
+
+    .fieldset {
+        display: grid;
+    }
+
+    .product-info-price {
+        border-bottom: solid 1px black;
+    }
+
+    .box-tocart {
+        width: 100%;
+    }
+
+    a.action.add {
+        display: none;
+    }
+
+    .block .title {
+        text-align: center;
+    }
+
+    .view-product-info {
+        & p:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .product-add-form .fieldset > .field:not(.choice) > .label, .product-add-form .fieldset .fields > .field:not(.choice) > .label {
+        box-sizing: content-box;
+        float: none;
+        width: auto;
+        text-align: left;
+        padding: 0;
+        font-weight: 400;
+    }
+
+    .page-title {
+        font-family: @font-opensand-regular;
+        font-weight: 400;
+        letter-spacing: -1px;
+        color: #45515d;
+        margin: 0;
+    }
+
+    .price {
+        font-family: @font-opensan-bold;
+        font-weight: 400;
+        color: #b3203a;
+    }
+
+    .breadcrumbs .items {
+        font-family: @font-opensand-regular;
+        font-weight: 400;
+        color: black;
+    }
+
+    .breadcrumbs .item:not(:last-child):after {
+        vertical-align: middle;
+    }
+
+    .item.title.active > .switch:hover {
+        padding-bottom: 6px;
+        background-color: #4f4f4f;
+        color: white;
+    }
+
+    product.data.items > .item.title {
+        & a {
+            border-radius: 6px;
+        }
+    }
+
+    .product.data.items > .item.title > .switch {
+        border: 1px solid #d1d1d1;
+        border-bottom: 1px solid #d1d1d1;
+    }
+
+    .image-gallery {
+        width: 50%;
+        float: left;
+    }
+
+    .video-gallery {
+        width: 50%;
+    }
+
+    i.fas.fa-share-alt {
+        float: right;
+    }
+}
+
+//
+//  Mobile (styles-m.css)
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .product.data.items > .item.title {
+        margin-top: 9px;
+        text-align: center;
+        width: 100%;
+        white-space: nowrap;
+    }
+    .product.data.items > .item.content {
+        border: 0;
+        border: 1px solid #d1d1d1;
+        border-radius: 13px;
+    }
+    .product.data.items > .item.title.active > .switch {
+        border-radius: 5px;
+    }
+    i.fas.fa-share-alt {
+        font-size: 18px;
+    }
+}
+
+//
+//  Desktop (style-l.css)
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .product.data.items > .item.title > .switch {
+        border: 1px solid #d1d1d1;
+        border-bottom: 1px solid #d1d1d1;
+    }
+    .product.data.items > .item.title {
+        text-align: center;
+        margin: 1% 1% 0 0;
+        width: calc(98% / 3);
+    }
+    .product.data.items > .item.title > .switch {
+        border-radius: 5px;
+    }
+    div#tab-label-reviews {
+        margin-right: 0;
+    }
+    .product.data.items > .item.title.active > .switch {
+        padding-bottom: 6px;
+        background-color: #4f4f4f;
+        color: white;
+    }
+    .product.data.items > .item.content {
+        border: 0;
+        border: 1px solid #d1d1d1;
+        border-radius: 13px;
+    }
+    i.fas.fa-share-alt {
+        font-size: 24px;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    .product.info.detailed {
+        width: 57%;
+        float: left;
+    }
+    .block.upsell {
+        width: 43%;
+        float: left;
+        text-align: center;
+    }
+    .page-title {
+        font-size: 36px;
+    }
+    .price {
+        font-size: 25px;
+    }
+    .page-main {
+        max-width: 1620px;
+    }
+    .breadcrumbs .items {
+        font-size: 20px;
+        margin-top: 25px;
+        margin-bottom: 33px;
+        margin-left: -10rem;
+    }
+}
+
+

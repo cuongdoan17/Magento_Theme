@@ -1,0 +1,22 @@
+<div class="home-news-title">
+    <?= $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('news-title')->toHtml(); ?>
+</div>
+<div class="home-news-item">
+    <div class="news-left">
+        <?= $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('news-image-1')->toHtml(); ?>
+    </div>
+    <div class="news-right">
+        <?php
+            for ($i = 2; $i <= 3; $i++) {
+        ?>
+        <div class="news-right-item">
+            <?= $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('news-image-'.$i)->toHtml(); ?>
+            <div class="news-right-item-content">
+                <?= $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('news-content-'.$i)->toHtml(); ?>
+            </div>
+        </div>
+        <?php
+            }
+        ?>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+& when (@media-common = true) {
+    button.checkout-button {
+        background-color: #8cb859;
+        a {
+            color: white;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+    }
+}
+//
+//  Desktop (style-l.css)
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    button.checkout-button {
+        width: 9rem;
+        margin-top: 0.7rem;
+        height: 3rem;
+        float: right;
+    }
+    .minicart-wrapper .action.showcart {
+        margin-top: 0.6rem;
+        margin-right: 2rem;
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    button.checkout-button {
+        width: 144px;
+        margin-top: 13px;
+        height: 43px;
+        float: right;
+        background-color: #8cb859;
+        a {
+            color: white;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+    }
+    .minicart-wrapper .action.showcart {
+        margin-top: 19px;
+        margin-left: -100px;
+    }
+}
+//
+//  Mobile (style-m.css)
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    button.checkout-button {
+        background-color: #8cb859;
+        width: 133px;
+        margin-top: 0px;
+        height: 45px;
+        a {
+            color: white;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+    }
+    .minicart-wrapper {
+        margin-top: 4px;
+    }
+    .minicart-wrapper .action.showcart:before {
+        font-size: 50px;
+    }
+}

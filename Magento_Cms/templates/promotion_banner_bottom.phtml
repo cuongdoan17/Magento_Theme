@@ -1,0 +1,12 @@
+<div class="promotion banner bottom">
+    <?php
+    for ($i = 1; $i <= 3; $i++) {
+        ?>
+        <div class="promotion-banner-bottom-image">
+            <?= $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('promotion-banner-bottom-' . $i)->toHtml(); ?>
+        </div>
+
+        <?php
+    }
+    ?>
+</div>

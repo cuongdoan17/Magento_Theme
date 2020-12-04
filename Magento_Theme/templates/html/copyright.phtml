@@ -1,0 +1,12 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<small class="copyright">
+    <span class="copyright-logo">
+         <?= $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('primary-logo')->toHtml(); ?>
+    </span>
+    <span><?= $block->escapeHtml($block->getCopyright()) ?></span>
+</small>

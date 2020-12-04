@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.wrapper">
+            <referenceContainer name="main">
+                <container name="main.container" htmlTag="div" htmlClass="main-container" before="main.content">
+                    <block class="Magento\Framework\View\Element\Template" name="main.banner.image" template="Magento_Cms::banner.phtml"/>
+                    <container name="brand-collapse" htmlTag="div">
+                        <block class="Magento\Framework\View\Element\Template" name="brand.collapse.image" template="Magento_Cms::brand_collapse.phtml"/>
+                    </container>
+                    <container name="category-banner" htmlClass="main category banner" htmlTag="div">
+                        <block class="Magento\Framework\View\Element\Template" name="category.banner" template="Magento_Cms::category_banner.phtml"/>
+                    </container>
+                    <container name="promotion-banner" htmlClass="promotion row banner up" htmlTag="div">
+                        <block class="Magento\Framework\View\Element\Template" name="promotion.banner.up" template="Magento_Cms::promotion_banner.phtml"/>
+                    </container>
+                    <container name="promotion-banner-bottom" htmlClass="promotion row banner bottom" htmlTag="div">
+                        <block class="Magento\Framework\View\Element\Template" name="promotion.banner.bottom" template="Magento_Cms::promotion_banner_bottom.phtml"/>
+                    </container>
+                    <container name="final.promotion" htmlClass="promotion final banner" htmlTag="div">
+                        <block class="Magento\Framework\View\Element\Template" name="promotion.final.banner" template="Magento_Cms::promotion_final.phtml"/>
+                    </container>
+                    <container name="best.seller" htmlClass="best seller" htmlTag="div">
+                        <block class="Magento\Framework\View\Element\Template" name="best.seller.title" template="Magento_Cms::best_seller_title.phtml"/>
+                        <block class="Magento\Framework\View\Element\Template" name="best.seller.product" template="Magento_Cms::best_seller_product.phtml"/>
+                    </container>
+                    <container name="home.news" htmlClass="home news" htmlTag="div">
+                        <block class="Magento\Framework\View\Element\Template" name="home.news.blog" template="Magento_Cms::home_news_blog.phtml"/>
+                    </container>
+                </container>
+            </referenceContainer>
+        </referenceContainer>
+    </body>
+</page>

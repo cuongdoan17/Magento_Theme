@@ -1,0 +1,32 @@
+<div class="footer links">
+    <div class="footer-title">
+        <?= $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer-title-1')->toHtml(); ?>
+    </div>
+    <div class="footer-links">
+        <?= $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer-links-1')->toHtml(); ?>
+    </div>
+    <div class="footer-title">
+        <div class="stay-connected">
+            <?= $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer-title-5')->toHtml(); ?>
+        </div>
+    </div>
+    <div class="footer-links">
+        <div class="social-links">
+            <div class="circle-border-facebook">
+                <a href="<?= $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('facebook-links')->toHtml(); ?>">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+            <div class="circle-border-twitter">
+                <a href="<?= $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('twitter-links')->toHtml(); ?>">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <div class="circle-border-mail">
+                <a href="<?= $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('mail-links')->toHtml(); ?>">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+& when (@media-common = true) {
+    li.product-item {
+        text-align: center;
+    }
+    .product-item-details {
+        text-align: center;
+        line-height: 13px;
+    }
+    button.action.tocart.primary {
+        background: transparent;
+        border: navajowhite;
+        color: #d83a41;
+        font-family: @font-opensan-bold;
+        & :hover {
+            background: transparent;
+            border: none;
+        }
+    }
+    span.product-image-container {
+        width: 100%;
+    }
+    .product-item-name {
+        font-size: 16px;
+        font-family: @font-opensan-bold;
+        font-weight: 700;
+    }
+    .price-box.price-final_price {
+        font-size: 24px;
+        font-family: @font-opensand-regular;
+        font-weight: 400;
+        margin: 0;
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .product-item-name {
+        font-size: 12px;
+        font-family: 'OpenSan bold';
+        font-weight: 700;
+    }
+}
