@@ -1,1 +1,19 @@
 <button class="video-gallery">Video</button>
+<script>
+    require([
+        'jquery',
+        'popupWindow'
+    ], function ($) {
+        'use strict';
+        $(".video-gallery").popupWindow({
+            "windowURL": "https://www.youtube.com/watch?v=R7Bqqjio37A&ab_channel=PhongMaxOfficial",
+            "windowName": "Product Video",
+            "width": 800,
+            "height": 800,
+            "left": 0,
+            "top": 0,
+            "resizable": 1,
+            "scrollbars": 1
+        });
+    });
+</script>
