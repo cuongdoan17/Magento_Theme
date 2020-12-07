@@ -1,12 +1,22 @@
+<?php
+$product_video = $this->getLayout()
+    ->createBlock('Magento\Cms\Block\Block')
+    ->setBlockId('product-test-video')
+    ->toHtml();
+?>
 <button class="video-gallery">Video</button>
 <script>
     require([
         'jquery',
         'popupWindow'
-    ], function ($) {
+    ], function ($)
+    {
+        var regex = /(<([^>]+)>)/ig
+        var product_video = "<?php echo $product_video ?>";
+        var result = product_video.replace(regex, "");
         'use strict';
         $(".video-gallery").popupWindow({
-            "windowURL": "https://www.youtube.com/watch?v=R7Bqqjio37A&ab_channel=PhongMaxOfficial",
+            "windowURL": result,
             "windowName": "Product Video",
             "width": 800,
             "height": 800,

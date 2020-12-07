@@ -111,10 +111,6 @@
         }
     }
 
-    .swatch-attribute.size {
-        display: none;
-    }
-
     .home.news {
         background-color: #efefef;
     }
@@ -138,6 +134,18 @@
 
     .slick-slide img {
         display: inline-block !important;
+    }
+
+    .product-item .price-box .price {
+        font-weight: 300;
+        white-space: nowrap;
+        float: none;
+        font-family: @font-opensand-regular;
+    }
+    .swatch-option.text {
+        font-size: 12px;
+        font-weight: 300;
+        border-radius: 8px;
     }
 }
 
@@ -375,6 +383,16 @@
             font-weight: 400;
             line-height: 19px;
             -webkit-line-clamp: 3;
+        }
+    }
+    .page-product-configurable {
+        .page-main {
+            .columns {
+                .column.main {
+                    width: 1620px;
+                    margin: auto;
+                }
+            }
         }
     }
 }

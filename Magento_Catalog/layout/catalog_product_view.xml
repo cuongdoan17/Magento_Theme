@@ -14,23 +14,27 @@
         <move element="page.main.title" destination="product.info.main" before="-"/>
         <move element="product.info.review" destination="product.info.price" after="-"/>
         <move element="product.info.upsell" destination="content" after="product.info.details"/>
-        <referenceContainer name="product.info.media">
-            <block class="Magento\Framework\View\Element\Template" name="image.gallery" template="Magento_Catalog::product/view/image_gallery.phtml" group="choose_file" />
-            <block class="Magento\Framework\View\Element\Template" name="video.gallery" template="Magento_Catalog::product/view/video_gallery.phtml" group="choose_file" />
-        </referenceContainer>
-        <referenceContainer name="product.info.main">
-            <block class="Magento\Framework\View\Element\Template" name="view-product-detail" template="Magento_Catalog::view_product_information.phtml"/>
-            <referenceBlock name="product.info.details">
-                <block class="Magento\Framework\View\Element\Template" name="delivery.return" template="Magento_Catalog::product/view/delivery_returns.phtml" group="detailed_info">
-                    <arguments>
-                        <argument translate="true" name="title" xsi:type="string">Delivery Returns</argument>
-                        <argument name="sort_order" xsi:type="string">20</argument>
-                    </arguments>
-                </block>
-            </referenceBlock>
-            <referenceContainer name="product.info.price">
-                <block class="Magento\Catalog\Block\Product\View" name="product.info.socialmedia" template="Magento_Catalog::product/view/socialmedia.phtml" before="product.price.final"/>
-            </referenceContainer>
+        <referenceContainer name="content">
+            <container name="product.main.content" htmlTag="div" htmlClass="product-main-content">
+                <referenceContainer name="product.info.media">
+                    <block class="Magento\Framework\View\Element\Template" name="image.gallery" template="Magento_Catalog::product/view/image_gallery.phtml" group="choose_file" />
+                    <block class="Magento\Framework\View\Element\Template" name="video.gallery" template="Magento_Catalog::product/view/video_gallery.phtml" group="choose_file" />
+                </referenceContainer>
+                <referenceContainer name="product.info.main">
+                    <block class="Magento\Framework\View\Element\Template" name="view-product-detail" template="Magento_Catalog::view_product_information.phtml"/>
+                    <referenceBlock name="product.info.details">
+                        <block class="Magento\Framework\View\Element\Template" name="delivery.return" template="Magento_Catalog::product/view/delivery_returns.phtml" group="detailed_info">
+                            <arguments>
+                                <argument translate="true" name="title" xsi:type="string">Delivery Returns</argument>
+                                <argument name="sort_order" xsi:type="string">20</argument>
+                            </arguments>
+                        </block>
+                    </referenceBlock>
+                    <referenceContainer name="product.info.price">
+                        <block class="Magento\Catalog\Block\Product\View" name="product.info.socialmedia" template="Magento_Catalog::product/view/socialmedia.phtml" before="product.price.final"/>
+                    </referenceContainer>
+                </referenceContainer>
+            </container>
         </referenceContainer>
     </body>
 </page>

@@ -84,14 +84,39 @@
     .image-gallery {
         width: 50%;
         float: left;
+        margin-top: 5px;
     }
 
     .video-gallery {
         width: 50%;
+        margin-top: 5px;
     }
 
     i.fas.fa-share-alt {
         float: right;
+    }
+
+    .product-items {
+        text-align: center;
+    }
+
+    .product-item-name {
+        font-family: @font-opensand-regular;
+        font-weight: 300;
+        white-space: nowrap;
+    }
+
+    .block-upsell {
+        & .product-item .price-box .price {
+            font-weight: 300;
+            white-space: nowrap;
+            float: left;
+            font-family: @font-opensand-regular;
+        }
+    }
+
+    .product-image-wrapper {
+        border: solid 1px #d1d1d1;
     }
 }
 
@@ -121,6 +146,20 @@
     }
     i.fas.fa-share-alt {
         font-size: 18px;
+    }
+    .fotorama__thumb-border {
+        border: 1px solid #b5b5b5;
+    }
+    .product-item-name {
+        font-size: 14px;
+    }
+
+    .product-item .price-box .price {
+        font-size: 17px;
+        margin-top: 2rem;
+    }
+    .products-grid .product-item {
+        width: 38%;
     }
 }
 
@@ -156,12 +195,25 @@
     i.fas.fa-share-alt {
         font-size: 24px;
     }
+    .fotorama__thumb-border {
+        border: 1px solid #b5b5b5;
+    }
+    .page-layout-1column .products-grid .product-item {
+        width: 28.666667%;
+    }
+    .product-item-name {
+        font-size: 16px;
+    }
+    .product-item .price-box .price {
+        font-size: 19px;
+        margin-top: 2rem;
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
-}
-
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    .page-layout-1column .products-grid .product-item {
+        width: 41.666667%;
+    }
     .product.info.detailed {
         width: 57%;
         float: left;
@@ -171,14 +223,17 @@
         float: left;
         text-align: center;
     }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
     .page-title {
         font-size: 36px;
     }
     .price {
         font-size: 25px;
     }
-    .page-main {
-        max-width: 1620px;
+    .page-layout-1column .products-grid .product-item {
+        width: 28%;
     }
     .breadcrumbs .items {
         font-size: 20px;
